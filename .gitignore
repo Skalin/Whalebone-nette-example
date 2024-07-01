@@ -1,0 +1,12 @@
+# PHPStorm
+.idea
+
+# PHP
+src/vendor
+
+# Nette
+src/temp
+src/log
+
+# ENV
+.env.local

@@ -1,0 +1,8 @@
+parameters:
+    level: 9
+    parallel:
+        maximumNumberOfProcesses: 1  # Adjust based on your CPU cores
+    excludePaths:
+        - app/UI
+    paths:
+        - app

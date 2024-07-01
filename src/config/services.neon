@@ -1,0 +1,10 @@
+services:
+	- App\Core\RouterFactory::createRouter
+	doctrine.orm.entityManagerDecorator: Doctrine\ORM\EntityManager
+
+
+search:
+	-	in: %appDir%
+		classes:
+			- *Factory
+			- *Facade

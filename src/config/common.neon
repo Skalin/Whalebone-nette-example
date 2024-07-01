@@ -1,0 +1,41 @@
+parameters:
+
+
+
+application:
+	errorPresenter:
+		4xx: Error:Error4xx
+		5xx: Error:Error5xx
+	mapping:
+		Whalebone: App\Whalebone\*\Presenters\*Presenter
+
+
+latte:
+	strictTypes: yes
+	strictParsing: yes
+	extensions:
+		- App\UI\Accessory\LatteExtension
+
+
+di:
+	export:
+		parameters: no
+		tags: no
+
+extensions:
+  console: Contributte\Console\DI\ConsoleExtension(%consoleMode%)
+  doctrine.dbal: Nettrine\DBAL\DI\DbalExtension
+  doctrine.dbal.console: Nettrine\DBAL\DI\DbalConsoleExtension
+  doctrine.orm: Nettrine\ORM\DI\OrmExtension
+  doctrine.orm.attributes: Nettrine\ORM\DI\OrmAttributesExtension
+  doctrine.orm.console: Nettrine\ORM\DI\OrmConsoleExtension
+  doctrine.cache: Nettrine\Cache\DI\CacheExtension
+  doctrine.migrations: Nettrine\Migrations\DI\MigrationsExtension
+
+search:
+  model:
+      in: %appDir%/Whalebone
+      classes:
+          - *Service
+          - *Validator
+          - *Repository

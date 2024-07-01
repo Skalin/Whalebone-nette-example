@@ -1,0 +1,27 @@
+doctrine.dbal:
+       connection:
+            driver: pdo_mysql
+            host: %ENV.DB_HOST%
+            dbname: %ENV.DB_DATABASE%
+            user: %ENV.DB_USER%
+            password: %ENV.DB_PASSWORD%
+            charset: utf8mb4
+            port: 3306
+
+doctrine.orm:
+    configuration:
+        customDatetimeFunctions:
+            dayOfWeek: DoctrineExtensions\Query\Mysql\DayOfWeek
+            year: DoctrineExtensions\Query\Mysql\Year
+            month: DoctrineExtensions\Query\Mysql\Month
+            date: DoctrineExtensions\Query\Mysql\Date
+
+doctrine.orm.attributes:
+    mapping:
+        App\Whalebone\DeviceModule\Models: %appDir%/Whalebone/DeviceModule/Models
+
+doctrine.migrations:
+    table: doctrine_migrations
+    column: version
+    directory: %appDir%/Migration
+    namespace: App\Migration
