@@ -14,15 +14,16 @@ COPY --from=composer:2.1 /usr/bin/composer /usr/bin/composer
 # Copy the application code
 COPY . /var/www/html
 
-RUN chown -R www-data:www-data /var/www/html/src
 RUN chmod -R 777 /var/www/html/src/bin/console
-RUN chmod -R 777 /var/www/html/src/temp
-RUN chmod -R 777 /var/www/html/src/log
-RUN chown -R www-data:www-data /var/www/html/src/temp
-RUN chown -R www-data:www-data /var/www/html/src/log
 
 COPY /docker/entrypoint.sh /usr/local/bin/entrypoint.sh
 COPY /docker/wait-for-it.sh /usr/local/bin/wait-for-it.sh
+
+COPY --chown=www-data /docker/app /var/www/html/src
+
+RUN chmod 777 -R /var/www/html/src/temp
+RUN chmod 777 -R /var/www/html/src/log
+RUN chown -R www-data:www-data /var/www/html/src
 
 RUN chmod +x /usr/local/bin/wait-for-it.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh

@@ -2,6 +2,10 @@
 
 wait-for-it.sh db:3306 --timeout=60 --strict -- echo "Database is up"
 
+chown -R www-data:www-data /var/www/html/src/temp
+chown -R www-data:www-data /var/www/html/src/log
+chmod -R 777 /var/www/html/src/temp
+chmod -R 777 /var/www/html/src/log
 # Run Composer install
 composer install
 
