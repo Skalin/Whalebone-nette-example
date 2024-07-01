@@ -10,14 +10,11 @@ RUN a2enmod rewrite
 # Install Composer
 COPY --from=composer:2.1 /usr/bin/composer /usr/bin/composer
 
+
 # Copy the application code
-RUN mkdir -p /src/temp && chmod -R 777 /src/temp
-RUN mkdir -p /src/log && chmod -R 777 /src/log
 COPY . /var/www/html
 
 RUN chown -R www-data:www-data /var/www/html/src
-RUN mkdir -p /var/www/html/src/temp && chmod -R 777 /var/www/html/src/temp
-RUN mkdir -p /var/www/html/src/log && chmod -R 777 /var/www/html/src/log
 RUN chmod -R 777 /var/www/html/src/bin/console
 
 COPY /docker/entrypoint.sh /usr/local/bin/entrypoint.sh
