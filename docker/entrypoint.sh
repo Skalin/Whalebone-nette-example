@@ -2,6 +2,7 @@
 
 wait-for-it.sh db:3306 --timeout=60 --strict -- echo "Database is up"
 
+mkdir -p /var/www/html/src/temp && mkdir -p /var/www/html/src/temp/cache && mkdir -p /var/www/html/src/log
 chown -R www-data:www-data /var/www/html/src/temp
 chown -R www-data:www-data /var/www/html/src/log
 chmod -R 777 /var/www/html/src/temp
