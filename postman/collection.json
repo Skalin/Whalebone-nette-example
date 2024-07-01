@@ -1,0 +1,915 @@
+{
+	"info": {
+		"_postman_id": "c540d914-cdff-4a2b-bc84-66a7c874a5d9",
+		"name": "Nette - WB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28644163"
+	},
+	"item": [
+		{
+			"name": "Device",
+			"item": [
+				{
+					"name": "List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"hostname\": \"test\",\r\n    \"deviceType\": \"pc\",\r\n    \"osType\": \"win\",\r\n    \"owner\": 1\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/whalebone/device/list",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"whalebone",
+								"device",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"hostname\": \"test\",\r\n    \"deviceType\": \"pc\",\r\n    \"osType\": \"win\",\r\n    \"owner\": 1\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/whalebone/device/list",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"whalebone",
+										"device",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 01 Jul 2024 06:23:41 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.59 (Debian)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Nette Framework 3"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "_nss=1; path=/; HttpOnly; SameSite=Strict"
+								},
+								{
+									"key": "Vary",
+									"value": "X-Requested-With,Accept-Encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "116"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"hostname\": \"test\",\n        \"deviceType\": \"pc\",\n        \"osType\": \"win\",\n        \"owner\": {\n            \"id\": 5,\n            \"name\": \"tester\",\n            \"lastName\": \"stary\"\n        }\n    },\n    {\n        \"id\": 2,\n        \"hostname\": \"test\",\n        \"deviceType\": \"pc\",\n        \"osType\": \"mac\",\n        \"owner\": {\n            \"id\": 5,\n            \"name\": \"tester\",\n            \"lastName\": \"stary\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create Device",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"hostname\": \"test\",\r\n    \"deviceType\": \"pc\",\r\n    \"osType\": \"win\",\r\n    \"owner\": 1\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/whalebone/device/create",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"whalebone",
+								"device",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"hostname\": \"test\",\r\n    \"deviceType\": \"pc\",\r\n    \"osType\": \"win\",\r\n    \"owner\": 5\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/whalebone/device/create",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"whalebone",
+										"device",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 01 Jul 2024 06:25:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.59 (Debian)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Nette Framework 3"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "_nss=1; path=/; HttpOnly; SameSite=Strict"
+								},
+								{
+									"key": "Vary",
+									"value": "X-Requested-With,Accept-Encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "103"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"hostname\": \"test\",\n    \"deviceType\": \"pc\",\n    \"osType\": \"win\",\n    \"owner\": {\n        \"id\": 5,\n        \"name\": \"tester\",\n        \"lastName\": \"stary\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"hostname\": \"test\",\r\n    \"deviceType\": \"pc\",\r\n    \"osType\": \"mac\",\r\n    \"owner\": 1\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/whalebone/device/1/update",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"whalebone",
+								"device",
+								"1",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"hostname\": \"test\",\r\n    \"deviceType\": \"pc\",\r\n    \"osType\": \"mac\",\r\n    \"owner\": 5\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/whalebone/device/2/update",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"whalebone",
+										"device",
+										"2",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 30 Jun 2024 21:07:31 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.59 (Debian)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Nette Framework 3"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "_nss=1; path=/; HttpOnly; SameSite=Strict"
+								},
+								{
+									"key": "Vary",
+									"value": "X-Requested-With,Accept-Encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "102"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"hostname\": \"test\",\n    \"deviceType\": \"pc\",\n    \"osType\": \"mac\",\n    \"owner\": {\n        \"id\": 5,\n        \"name\": \"tester\",\n        \"lastName\": \"stary\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/whalebone/device/1/delete",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"whalebone",
+								"device",
+								"1",
+								"delete"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Example",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/whalebone/device/1/delete",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"whalebone",
+										"device",
+										"1",
+										"delete"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 01 Jul 2024 18:46:24 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.59 (Debian)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Nette Framework 3"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "_nss=1; path=/; HttpOnly; SameSite=Strict"
+								},
+								{
+									"key": "Vary",
+									"value": "X-Requested-With"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Device Owner",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/whalebone/device-owner/list",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"whalebone",
+								"device-owner",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/whalebone/device-owner/list",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"whalebone",
+										"device-owner",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 01 Jul 2024 06:23:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.59 (Debian)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Nette Framework 3"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "_nss=1; path=/; HttpOnly; SameSite=Strict"
+								},
+								{
+									"key": "Vary",
+									"value": "X-Requested-With,Accept-Encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "74"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=99"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 4,\n        \"name\": \"tester\",\n        \"lastName\": \"suprovy\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"tester\",\n        \"lastName\": \"stary\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create Owner",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"tester\",\r\n    \"lastName\": \"suprovy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/whalebone/device-owner/create",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"whalebone",
+								"device-owner",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"tester\",\r\n    \"lastName\": \"suprovy\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/whalebone/device-owner/create",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"whalebone",
+										"device-owner",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 30 Jun 2024 20:57:14 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.59 (Debian)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Nette Framework 3"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "_nss=1; path=/; HttpOnly; SameSite=Strict"
+								},
+								{
+									"key": "Vary",
+									"value": "X-Requested-With"
+								},
+								{
+									"key": "Content-Length",
+									"value": "45"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 5,\n    \"name\": \"tester\",\n    \"lastName\": \"suprovy\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Owner",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"tester\",\r\n    \"lastName\": \"stary\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/whalebone/device-owner/1/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"whalebone",
+								"device-owner",
+								"1",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"tester\",\r\n    \"lastName\": \"stary\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/whalebone/device-owner/5/update",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"whalebone",
+										"device-owner",
+										"5",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 30 Jun 2024 21:01:50 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.59 (Debian)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Nette Framework 3"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "_nss=1; path=/; HttpOnly; SameSite=Strict"
+								},
+								{
+									"key": "Vary",
+									"value": "X-Requested-With"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 5,\n    \"name\": \"tester\",\n    \"lastName\": \"stary\",\n    \"devices\": {}\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Devices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/whalebone/device-owner/1/devices",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"whalebone",
+								"device-owner",
+								"1",
+								"devices"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Devices Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/whalebone/device-owner/1/devices",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"whalebone",
+										"device-owner",
+										"1",
+										"devices"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 30 Jun 2024 21:06:08 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.59 (Debian)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Nette Framework 3"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "_nss=1; path=/; HttpOnly; SameSite=Strict"
+								},
+								{
+									"key": "Vary",
+									"value": "X-Requested-With,Accept-Encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "111"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=99"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"hostname\": \"test\",\n        \"deviceType\": \"pc\",\n        \"osType\": \"win\",\n        \"owner\": {\n            \"id\": 5,\n            \"name\": \"tester\",\n            \"lastName\": \"stary\"\n        }\n    },\n    {\n        \"id\": 2,\n        \"hostname\": \"test\",\n        \"deviceType\": \"pc\",\n        \"osType\": \"win\",\n        \"owner\": {\n            \"id\": 5,\n            \"name\": \"tester\",\n            \"lastName\": \"stary\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/whalebone/device-owner/1/delete",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"whalebone",
+								"device-owner",
+								"1",
+								"delete"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Example",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/whalebone/device-owner/1/delete",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"whalebone",
+										"device-owner",
+										"1",
+										"delete"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 01 Jul 2024 18:48:03 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.59 (Debian)"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Nette Framework 3"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "_nss=1; path=/; HttpOnly; SameSite=Strict"
+								},
+								{
+									"key": "Vary",
+									"value": "X-Requested-With"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:8080"
+		}
+	]
+}

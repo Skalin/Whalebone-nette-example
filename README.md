@@ -9,7 +9,7 @@ The application will install all dependencies, start the server, wait for the da
 
 
 ## API Documentation
-The API is fully documented in Postman: https://api.postman.com/collections/28644163-c540d914-cdff-4a2b-bc84-66a7c874a5d9?access_key=PMAT-01J1PFDN7M13T2FAZ5Y76ZV6EH
+The API is fully documented in Postman in the repository in ```postman/collection.json```
 
 The application is based on nette standard project, where there is the ```Whalebone``` module in the ```src/app``` folder.
 The ```Whalebone``` module is divided between smaller submodules, the only one is ```DeviceModule```.
