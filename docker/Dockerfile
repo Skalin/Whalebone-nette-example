@@ -16,6 +16,10 @@ COPY . /var/www/html
 
 RUN chown -R www-data:www-data /var/www/html/src
 RUN chmod -R 777 /var/www/html/src/bin/console
+RUN chmod -R 777 /var/www/html/src/temp
+RUN chmod -R 777 /var/www/html/src/log
+RUN chown -R www-data:www-data /var/www/html/src/temp
+RUN chown -R www-data:www-data /var/www/html/src/log
 
 COPY /docker/entrypoint.sh /usr/local/bin/entrypoint.sh
 COPY /docker/wait-for-it.sh /usr/local/bin/wait-for-it.sh
