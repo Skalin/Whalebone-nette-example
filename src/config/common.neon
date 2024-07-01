@@ -39,3 +39,4 @@ search:
           - *Service
           - *Validator
           - *Repository
+          - *Reader
